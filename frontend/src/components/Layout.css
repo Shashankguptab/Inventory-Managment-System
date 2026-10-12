@@ -1,0 +1,124 @@
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* -------------------------
+   SIDEBAR
+------------------------- */
+
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background: #1e293b;
+    color: white;
+    padding: 24px 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar-header {
+    margin-bottom: 30px;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.sidebar-header p {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* -------------------------
+   NAVIGATION
+------------------------- */
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #cbd5e1;
+
+    padding: 11px 14px;
+    border-radius: 6px;
+
+    transition: 0.2s;
+}
+
+.nav-link:hover {
+    background: #334155;
+    color: white;
+}
+
+.nav-link.active {
+    background: #2563eb;
+    color: white;
+}
+
+/* -------------------------
+   LOGOUT
+------------------------- */
+
+.logout-button {
+    margin-top: auto;
+
+    border: none;
+    padding: 11px;
+
+    background: #ef4444;
+    color: white;
+
+    border-radius: 6px;
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+.logout-button:hover {
+    background: #dc2626;
+}
+
+/* -------------------------
+   MAIN CONTENT
+------------------------- */
+
+.main-content {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+
+    min-height: 100vh;
+
+    padding: 32px;
+
+    background: #f8fafc;
+}
+
+/* -------------------------
+   RESPONSIVE
+------------------------- */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .main-content {
+        margin-left: 190px;
+        width: calc(100% - 190px);
+        padding: 20px;
+    }
+
+}
